@@ -1,0 +1,175 @@
+.home-page-container{
+    height: 85vh;
+    background-color: black;
+    display: flex;
+}
+
+/*----------------------3 outer flex items--------------------------*/
+#col-1{
+    width:25%;
+    flex-grow: 1;
+    background-color: black;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+}
+
+#col-2{
+    width: 50%;
+    flex-grow: 3;
+    background-color: black;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+}
+
+#col-3{
+    width: 25%;
+    flex-grow: 1.75;
+    background-color: black;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------Two inner flex items in first flex item------------------*/
+#description-box-div{
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    flex-grow: 1;
+    margin:  10px 0px 0px 10px;
+    padding: 2.5px;
+}
+
+#list-box-div{
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    flex-grow: 2.5;
+    margin:  10px 0px 10px 10px; 
+    overflow:scroll;
+    overflow-x:hidden;
+    color: white;
+    padding: 2.5px;
+}
+
+/*--------------Two inner flex items in second flex item------------------*/
+
+#totals-box{
+    background-color:black;
+    flex-grow: 1;
+    margin: 5px 5px 0px 5px;
+    display: flex;
+}
+
+#map-div{
+    background-color: black;
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    flex-grow: 3;
+    margin: 10px;
+    margin-top: 5px;
+}
+
+/*--------------Three inner flex items in third flex item------------------*/
+
+.graph-card{
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    height: 33%;
+    margin: 10px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+#bottom-graph-card{
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    height: 33%;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+/*----------------------Three columns of #inner-item-2-1----------------------*/
+
+.totals-column{
+    flex-grow: 1;
+    background-color: black;
+    /* background-color: grey; */
+ }
+ 
+ /*----------------Two rows on column 1, 2, 3-----------------------------------*/
+ 
+.totals-card{
+    height:55%;
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    margin: 5px;
+    margin-bottom: 10px;
+    
+ }
+ 
+.thirty-day-total-card{
+   height: 35%;
+   background-color: rgb(39, 37, 37);
+   border: solid;
+   border-color: rgb(65,65,65);
+   border-width: 1.5px;
+   margin: 5px;
+   margin-bottom: 0px;
+   
+}
+
+/*Scrollbar css code borrowed from W3Schools example https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #363636; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(82, 81, 81); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------mobile--------------------------------*/
+
+/* @media all and (max-width: 600px) {
+    .home-page-container{  
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+ 

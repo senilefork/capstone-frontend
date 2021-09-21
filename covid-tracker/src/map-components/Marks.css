@@ -1,0 +1,19 @@
+.map-body{
+    background-color: rgb(15, 15, 31);
+}
+
+.country{
+    fill:rgb(39, 32, 30);
+    stroke:rgb(149, 152, 155);
+    stroke-width: .4
+}
+
+.country:hover{
+    fill: red;
+}
+
+.country-interior{
+   fill: none;
+   stroke:none;
+   
+}
