@@ -100,15 +100,30 @@
 
 /*----------------------Three columns of #inner-item-2-1----------------------*/
 
-.totals-column{
+.totals-column-1{
     flex-grow: 1;
     background-color: black;
+    width: 33%
+    /* background-color: grey; */
+ }
+
+ .totals-column-2{
+    flex-grow: 1;
+    background-color: black;
+    width: 33%
+    /* background-color: grey; */
+ }
+
+ .totals-column-3{
+    flex-grow: 1;
+    background-color: black;
+    width: 33%
     /* background-color: grey; */
  }
  
  /*----------------Two rows on column 1, 2, 3-----------------------------------*/
  
-.totals-card{
+.total-card{
     height:55%;
     background-color: rgb(39, 37, 37);
     border: solid;
@@ -116,19 +131,32 @@
     border-width: 1.5px;
     margin: 5px;
     margin-bottom: 10px;
-    
+    text-align: center;
+    padding: 10px;
  }
- 
-.thirty-day-total-card{
-   height: 35%;
-   background-color: rgb(39, 37, 37);
-   border: solid;
-   border-color: rgb(65,65,65);
-   border-width: 1.5px;
-   margin: 5px;
-   margin-bottom: 0px;
-   
+
+ .today-card{
+    height: 35%;
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;  
+ }
+
+.totals-header{
+    color: white;
+    font-size: 20px;
 }
+
+.totals{
+    font-weight: bold;
+    padding: 5px;
+}
+
 
 /*Scrollbar css code borrowed from W3Schools example https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar */
 

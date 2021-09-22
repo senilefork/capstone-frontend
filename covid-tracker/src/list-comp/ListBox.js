@@ -10,10 +10,14 @@ const ListBox = () =>{
              <h4>Cases | Deaths by Country</h4>
           </div>
           {countriesCovidData.map(c => (
-            <div id="country-div">
-            <p id="country-p">{c.country}</p>
-            <p>Total: {c.cases} | {c.deaths}</p>
-            <p>30 Day:</p>
+            <div className="country-div">
+              <div className="country-header">
+                <p className="country-p">{c.country}</p>
+                <img src={c.flag} style={{height: "20px", width: "30px", marginTop: "8px"}}/>
+              </div>
+              <p className="totals-p">Total: {c.cases} | {c.deaths}</p>
+              <p className="today-p">Today: {c.todayCases} | {c.todayDeaths}</p>
+              <hr/>
             </div>
             ))}
         </div>

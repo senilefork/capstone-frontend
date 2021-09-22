@@ -10,13 +10,13 @@ const HomePageCard = () =>{
    
    const [countriesData, setCountriesData] = useState(null);
    const [globalData, setGlobalData] = useState(null); 
-   console.log(globalData)
+  
    useEffect(() =>{
      async function getCountriesCovidData(){
         //Get country, cases, deaths lat and long from api and store as objs in array
         const apiData = await CovidTrackerApi.getCountriesData(); 
         const countriesCovidAndCoorData = apiData.map(c => (
-          {country: c.country, lat: c.countryInfo.lat, long: c.countryInfo.long, cases: c.cases, deaths: c.deaths}
+          {country: c.country, lat: c.countryInfo.lat, long: c.countryInfo.long, cases: c.cases, deaths: c.deaths, recovered: c.recovered, todayCases: c.todayCases, todayDeaths: c.todayDeaths, todayRecovered: c.todayRecovered,  flag: c.countryInfo.flag}
       ));
       setCountriesData(countriesCovidAndCoorData);
      }
