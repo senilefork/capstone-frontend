@@ -45,6 +45,12 @@ class CovidTrackerApi {
     return res.data;
   }
 
+  /* Get historical data per country*/
+  static async getHistoricalCountry(country, days){
+    let res = await this.request(`data/countries/${country}/${days}`);
+    return res.data;
+  }
+
   /* Get globals historical data: cases, deaths, recovered for last 30 days */
   static async getGlobalHistoricalThirtyDays(){
     let res = await this.request(`data/historical-all`);

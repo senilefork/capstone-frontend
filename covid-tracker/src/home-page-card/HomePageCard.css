@@ -1,5 +1,5 @@
 .home-page-container{
-    height: 85vh;
+    height: 100vh;
     background-color: black;
     display: flex;
 }
@@ -30,6 +30,7 @@
     /* background-color: grey; */
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
 /*--------------Two inner flex items in first flex item------------------*/
@@ -77,27 +78,19 @@
 
 /*--------------Three inner flex items in third flex item------------------*/
 
-.graph-card{
+#graph-card{
     background-color: rgb(39, 37, 37);
     border: solid;
     border-color: rgb(65,65,65);
     border-width: 1.5px;
     height: 33%;
-    margin: 10px;
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin: 10px 10px 0px 0px;
+    padding: 15px 5px 5px 5px;
 }
 
-#bottom-graph-card{
-    background-color: rgb(39, 37, 37);
-    border: solid;
-    border-color: rgb(65,65,65);
-    border-width: 1.5px;
-    height: 33%;
-    margin: 10px;
-    margin-left: 0px;
+#graph-card-header{
+    color: rgb(153, 153, 153)
 }
-
 /*----------------------Three columns of #inner-item-2-1----------------------*/
 
 .totals-column-1{

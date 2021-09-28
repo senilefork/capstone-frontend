@@ -3,8 +3,8 @@ import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
 class UsersApi {
-
-  static token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RhZG1pbiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMTExODc5MX0.AqT7KiMVLRYg6JXdsP84ELB6P9XaOzvhR7xpgvUy2zo';
+  // the token for interacting with the API will be stored here.
+  static token;
   
   /* method for making axios requests to our server  */
   static async request(endpoint, data = {}, method = "get") {

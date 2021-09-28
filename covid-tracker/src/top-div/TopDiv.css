@@ -1,4 +1,10 @@
-.top-div{
-    height: 10vh;
-    background-color: blue;
+#top-div{
+    height: 7.5vh;
+    background-color: rgb(17, 114, 206);
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-signup{
+    display: flex;
 }
