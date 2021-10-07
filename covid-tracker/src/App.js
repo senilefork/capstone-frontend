@@ -6,9 +6,7 @@ import UsersApi from './usersApi';
 import UserContext from "./context/UserContext";
 import Routes from "./routes/Routes";
 import TopDiv from './top-div/TopDiv';
-import SiteNav from './site-nav/SiteNav';
-import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 
 function App() {
   //use custom hook to initialize state of token
@@ -67,7 +65,6 @@ function App() {
       <BrowserRouter>
         <UserContext.Provider value={{currentUser, setCurrentUser}}>
           <TopDiv logout={logOut} />
-          <SiteNav />
           <Routes login={login} signup={signup} />
         </UserContext.Provider>
      </BrowserRouter>

@@ -7,27 +7,21 @@
 /*----------------------3 outer flex items--------------------------*/
 #col-1{
     width:25%;
-    flex-grow: 1;
     background-color: black;
-    /* background-color: grey; */
     display: flex;
     flex-direction: column;
 }
 
 #col-2{
     width: 50%;
-    flex-grow: 3;
     background-color: black;
-    /* background-color: grey; */
     display: flex;
     flex-direction: column;
 }
 
 #col-3{
     width: 25%;
-    flex-grow: 1.75;
     background-color: black;
-    /* background-color: grey; */
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
@@ -86,6 +80,8 @@
     height: 33%;
     margin: 10px 10px 0px 0px;
     padding: 15px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 #graph-card-header{
@@ -97,21 +93,18 @@
     flex-grow: 1;
     background-color: black;
     width: 33%
-    /* background-color: grey; */
  }
 
  .totals-column-2{
     flex-grow: 1;
     background-color: black;
     width: 33%
-    /* background-color: grey; */
  }
 
  .totals-column-3{
     flex-grow: 1;
     background-color: black;
     width: 33%
-    /* background-color: grey; */
  }
  
  /*----------------Two rows on column 1, 2, 3-----------------------------------*/

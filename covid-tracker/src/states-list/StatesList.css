@@ -1,0 +1,16 @@
+#us-list-box-div{
+    background-color: rgb(39, 37, 37);
+    border: solid;
+    border-color: rgb(65,65,65);
+    border-width: 1.5px;
+    flex-grow: 2.5;
+    margin:  10px 0px 10px 10px; 
+    overflow:scroll;
+    overflow-x:hidden;
+    color: white;
+    padding: 5px;
+}
+
+.states-cases-p{
+    color: rgb(236, 39, 39);
+}

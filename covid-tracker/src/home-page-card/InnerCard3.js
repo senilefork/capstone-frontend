@@ -1,25 +1,11 @@
-import { useState, useEffect } from "react";
-import CovidTrackerApi from "../covidApi";
+import { useContext } from "react";
 import GraphCard from "../graph-card/GraphCard";
-
+import CovidDataContext from "../context/CovidDataContext"; 
 
 const InnerCard3 = () =>{
 
-  const [data, setData] = useState(null);
-  //const[test, setTest] = useState(null);
-  //console.log(data.timeline.cases)
-  useEffect(() =>{
-    async function getData(){
-      const d = await CovidTrackerApi.getGlobalHistorical(365);
-      const t = await CovidTrackerApi.getHistoricalCountry("Iran",365);
-      setData(d);
-    }
-    getData();
-  }, []);
-
-  if(!data) return <h1>Loading...</h1>
-  if(data.timeline) setData(data.timeline)
-
+  const { globalHistoricalData } = useContext(CovidDataContext);
+  const data = globalHistoricalData;
 
     return(
         <div id="col-3">

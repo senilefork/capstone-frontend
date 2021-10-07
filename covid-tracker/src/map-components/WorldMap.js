@@ -15,7 +15,7 @@ const WorldMap = () =>{
 
    useEffect(() => {
       async function getMapAndCoordInfo(){
-        //Get topojson from url and convert to geojson
+        //Get topojson from url 
         const topojsonData = await json(jsonUrl);
         //topojsonData.objects.countries has polygon data for each country
         const { countries } = topojsonData.objects;
@@ -35,9 +35,6 @@ const WorldMap = () =>{
       }
       getMapAndCoordInfo();
    }, []);
-
-  // console.log(coordData)
-  //console.log('map path', mapPathData)
 
    if(!mapPathData || !coordData) return(<h1>Loading...</h1>)
 

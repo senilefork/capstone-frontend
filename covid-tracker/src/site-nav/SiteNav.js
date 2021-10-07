@@ -12,7 +12,8 @@ const SiteNav = () =>{
            <h4 id="site-nav-header">CARONA VIRUS DASHBOARD</h4> 
          </div>
          <div id="links">
-           <p>World Map</p> 
+           <p>World Map</p>
+            <p> | </p>
            <p>U.S. Map</p> 
          </div> 
        </div>

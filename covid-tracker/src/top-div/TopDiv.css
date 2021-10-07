@@ -3,6 +3,8 @@
     background-color: rgb(17, 114, 206);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 #login-signup{

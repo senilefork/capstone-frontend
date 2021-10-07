@@ -1,4 +1,5 @@
 import { scaleBand, scaleLinear, max, min } from 'd3';
+import { v4 as uuidv4 } from 'uuid';
 
 const GraphCard = ({ data, dataType, color }) =>{
   const width = 380;
@@ -26,16 +27,17 @@ const GraphCard = ({ data, dataType, color }) =>{
   .range([innerHeight, 0])
 
   return(
-      <div id="graph-card" style={{display: "flex", flexDirection: "column"}}>
+      <div id="graph-card" >
         <div id="graph-card-header">
           <h4>
             Total {dataType} 365 Days
           </h4>
         </div>
        
-          <svg height="auto" width="auto">
+          <svg height="auto" width="auto" >
             {dataArray.map((d) => (
-              <rect 
+              <rect
+               key={uuidv4()} 
                x={xScale(d.dates)}
                y={yScale(d.data)}
                width={xScale.bandwidth()}
@@ -45,6 +47,7 @@ const GraphCard = ({ data, dataType, color }) =>{
               ))}
               {yScale.ticks(6).map(tickValue => (
                 <text
+                  key={uuidv4()} 
                   x={0}
                   y={yScale(tickValue) }
                   style={{fill: "rgb(107,107,107)"}}

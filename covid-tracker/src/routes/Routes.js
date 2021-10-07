@@ -2,6 +2,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import HomePageCard from '../home-page-card/HomePageCard';
 import SignupForm from "../signup/SignupForm";
 import LoginForm from "../login/LoginForm";
+import USPageComp from "../us-page/USPageComp";
 
 const Routes = ({ login, signup }) =>{
     return(
@@ -15,6 +16,9 @@ const Routes = ({ login, signup }) =>{
         </Route>
         <Route exact path="/login">
           <LoginForm login={login} />
+        </Route>
+        <Route exact path="/us-page">
+          <USPageComp />
         </Route>
         <Redirect to="/" />
       </Switch>

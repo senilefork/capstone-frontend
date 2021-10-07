@@ -27,6 +27,11 @@ p{
     padding: 2px;
 }
 
+.country-p:hover{
+    color: rgb(180, 174, 174);
+    cursor: pointer;
+}
+
 .totals-p{
     padding: 5px;
 }
