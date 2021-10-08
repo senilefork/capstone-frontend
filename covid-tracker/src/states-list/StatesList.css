@@ -14,3 +14,8 @@
 .states-cases-p{
     color: rgb(236, 39, 39);
 }
+
+.state:hover{
+    color: rgb(180, 174, 174);
+    cursor: pointer;
+}

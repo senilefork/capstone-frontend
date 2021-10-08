@@ -10,10 +10,9 @@ import "./US-Page.css";
 
 const USPageComp = () => {
 
-  const [hostoricalCountyData, setData] = useState(null);
+  const [historicalCountyData, setData] = useState();
   const [currentState, setCurrentState] = useState('california');
 
-  console.log(hostoricalCountyData)
   useEffect(() =>{
     async function getData() {
       const d = await CovidTrackerApi.getHistoricalDataCounty(currentState, 365);
@@ -22,17 +21,17 @@ const USPageComp = () => {
     getData()
   }, [currentState])
 
-  if(!hostoricalCountyData) return <h1 stlye={{color: "white"}}>Loading...</h1>
+  if(!historicalCountyData) return <h1 stlye={{color: "white"}}>Loading...</h1>
 
-  const casesObject = sumStateTimeline(hostoricalCountyData);
+  const casesObject = sumStateTimeline(historicalCountyData);
+
     return (
         <div>
-          <SiteNav />
           <div id="us-page-container">
-           <StatesCovidDataContext.Provider value={{setCurrentState}} >
+           <StatesCovidDataContext.Provider value={{casesObject: casesObject, setCurrentState}} >
             <InnerUSCard1 />
             <InnerUSCard2 />
-            <InnerUSCard3 currentState={currentState} casesObject={casesObject} />
+            <InnerUSCard3 currentState={currentState}/>
            </StatesCovidDataContext.Provider>
           </div>
         </div>

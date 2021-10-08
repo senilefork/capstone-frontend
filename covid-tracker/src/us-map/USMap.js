@@ -3,9 +3,12 @@ import { json, extent, interpolateYlOrRd, scaleSequential, max } from 'd3';
 import AlbersMarks from "./AlbersMarks";
 import CovidTrackerApi from "../covidApi";
 import { v4 as uuidv4 } from 'uuid';
+//reference: https://vizhub.com/curran/d5ad96d1fe8148bd827a25230cc0f083
 
+/*US-MAP component*/
 const USMap = () => {
 
+  //url for geoJson for us map 
     const geoJsonUrl = 'https://gist.githubusercontent.com/almccon/798feae1c276739f819a2f2b4784a728/raw/edcfa762dc9bb43e08a28fc58cc2a7e58847fe2f/us_states.geojson';
 
     const [mapPathData, setMapPathData] = useState(null);
@@ -13,9 +16,11 @@ const USMap = () => {
 
     useEffect(() => {
        async function getMapPathData() {
+         //get map path data and set it
           const geoJson = await json(geoJsonUrl);
           setMapPathData(geoJson);
        }
+       //get us covid data and set it
        async function getUSTotalsData() {
            const data = await CovidTrackerApi.getAllUSDataPerState();
            setData(data);
@@ -24,7 +29,7 @@ const USMap = () => {
        getUSTotalsData();
     }, [])
 
-    if(!mapPathData || !data) return <h1>Loading...</h1>
+    if(!mapPathData || !data) return <h1 style={{color: "white"}}>Loading...</h1>
 
     const dataMap = new Map();
     const percentArray = [];
@@ -40,11 +45,12 @@ const USMap = () => {
         percentArray.push(0);
       }
     })   
-
+    //set color scale with domin from 0 to whatever the max of percentArray is
     const colorScale = scaleSequential(interpolateYlOrRd).domain([0, max(percentArray)])
     const arr = []
     const ex = extent(percentArray)
 
+    //make an array of percent values for use in  color legend
     for(let i = ex[0]; i <= ex[1]; i++){
       arr.push(i)
     }

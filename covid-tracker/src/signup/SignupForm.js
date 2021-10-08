@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css";
 import { useHistory } from "react-router";
 
+//signup form
 const SignupForm = ({ signup }) =>{
 
   const history = useHistory();

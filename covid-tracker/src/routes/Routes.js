@@ -3,7 +3,7 @@ import HomePageCard from '../home-page-card/HomePageCard';
 import SignupForm from "../signup/SignupForm";
 import LoginForm from "../login/LoginForm";
 import USPageComp from "../us-page/USPageComp";
-
+//app routes
 const Routes = ({ login, signup }) =>{
     return(
     <div>

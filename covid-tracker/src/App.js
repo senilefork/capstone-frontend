@@ -6,6 +6,7 @@ import UsersApi from './usersApi';
 import UserContext from "./context/UserContext";
 import Routes from "./routes/Routes";
 import TopDiv from './top-div/TopDiv';
+import SiteNav from './site-nav/SiteNav';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
       <BrowserRouter>
         <UserContext.Provider value={{currentUser, setCurrentUser}}>
           <TopDiv logout={logOut} />
+          <SiteNav />
           <Routes login={login} signup={signup} />
         </UserContext.Provider>
      </BrowserRouter>

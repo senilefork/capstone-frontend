@@ -1,5 +1,6 @@
 import React from "react";
 
+//div that renders current state in upper right corner of us-page
 const State = ({ currentState }) => {
     return(
         <React.Fragment>

@@ -29,13 +29,11 @@
     padding: 5px;
 }
 
-
-
 .login-inputs input {
-    height: 3em;
+    height: 2.5em;
     width: 80%;
     margin: auto;
-    border: 3px solid #ccc;
+    font-size: 18px;
 }
 
 .input-header{
@@ -58,7 +56,6 @@
     width: 130px;
     box-shadow: none;
     border-radius: 5%;
-    border:none;
     border-style: solid;
     border-color: rgb(70, 69, 69);    
 }

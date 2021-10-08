@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { json, zoom } from "d3";
+import { json } from "d3";
 import * as topojson from "topojson-client";
 import Marks from "./Marks";
 import CovidTrackerApi from "../covidApi";
+//reference: https://vizhub.com/curran/295f06f6efd749f0acc19b69a37687a6
 
 const WorldMap = () =>{
     //url contains topojson data we will convert to geojson for map points

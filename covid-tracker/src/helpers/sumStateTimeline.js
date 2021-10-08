@@ -1,4 +1,4 @@
-
+/*This function was written specifically to sum the total number of covid cases of a given state. Because totals are only reported at the county level this function loops through time series data for each county and creates a new time series object with state totals*/
 function sumStateTimeline(array) {
     let dates = [];
     let cases = [];

@@ -4,6 +4,7 @@ import CovidTrackerApi from "../covidApi";
 import { v4 as uuidv4 } from 'uuid';
 import "./ListBox.css";
 
+/*This component renders the list of countries seen on the homepage. */
 const ListBox = () =>{
     const [countriesData, setCountriesData] = useState(null);
     const { setGlobalData, setGlobalHistoricalData } = useContext(CovidDataContext);
@@ -20,6 +21,7 @@ const ListBox = () =>{
       getCountriesCovidData();
     }, []);
 
+    //when a user clicks a country the global and historical data states changes and components re-render
     async function handleClick(e){
       const country = e.target.id;
       const data = await CovidTrackerApi.getCountryData(country);
@@ -29,7 +31,7 @@ const ListBox = () =>{
       setGlobalHistoricalData({cases: timeData.cases, deaths: timeData.deaths, recovered: timeData.recovered});
     }
 
-    if(!countriesData) return <h1>Loading</h1>
+    if(!countriesData) return <h1 style={{color: "white"}}>Loading</h1>
     return(
         <div id="list-box-div">
           <div id="list-box-heading">

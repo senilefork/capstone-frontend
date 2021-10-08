@@ -3,9 +3,11 @@ import VaxLineChart from "../line-charts/VaxLineChart";
 import PercentCard from "../percent-card/PercentCard";
 import ErrorCard from "../line-charts/ErrorCard";
 import State from "../state/State";
+import { useContext } from "react";
+import StatesCovidDataContext from "../context/StatesCovidDataContext";
 
-const InnerUSCard3 = ({ currentState, casesObject }) => {
-
+const InnerUSCard3 = ({ currentState }) => {
+    const { casesObject } = useContext(StatesCovidDataContext);
     return(
         <div id="us-col-3">
           <State currentState={currentState} />
@@ -17,3 +19,4 @@ const InnerUSCard3 = ({ currentState, casesObject }) => {
 }
 
 export default InnerUSCard3;
+

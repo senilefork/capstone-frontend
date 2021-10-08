@@ -5,8 +5,9 @@ import CovidTrackerApi from "../covidApi";
 import InnerCard1 from "./InnerCard1";
 import InnerCard2 from "./InnerCard2";
 import InnerCard3 from "./InnerCard3";
-import SiteNav from '../site-nav/SiteNav';
 
+
+/*This is the highest level component for the home page (world map page). It gathers totals and historical data to be passed to lower level components for rendering*/
 const HomePageCard = () =>{
    
    const [globalData, setGlobalData] = useState({}); 
@@ -32,7 +33,6 @@ const HomePageCard = () =>{
 
    return(
        <div>
-       <SiteNav />
        <div className="home-page-container">
          <CovidDataContext.Provider value={{globalCovidData: globalData, setGlobalData,   globalHistoricalData, setGlobalHistoricalData}}>  
            <InnerCard1 />
