@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import CovidTrackerApi from "../covidApi";
-import SiteNav from "../site-nav/SiteNav";
 import InnerUSCard1 from "./InnerUSCard1";
 import InnerUSCard2 from "./InnerUSCard2";
 import InnerUSCard3 from "./InnerUSCard3";

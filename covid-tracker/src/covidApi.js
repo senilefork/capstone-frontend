@@ -4,8 +4,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 
 class CovidTrackerApi {
 
-  static token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RhZG1pbiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMTExODc5MX0.AqT7KiMVLRYg6JXdsP84ELB6P9XaOzvhR7xpgvUy2zo';
-  
+  static token;
   /* method for making axios requests to our server  */
   static async request(endpoint, data = {}, method = "get") {
     console.debug("API Call:", endpoint, data, method);
